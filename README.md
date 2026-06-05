@@ -1,5 +1,5 @@
 # KTH
-Contains most of my course material from the degree program of computer science and engineering at KTH 
+Contains most of my code by course from the degree program of computer science and engineering at KTH 
 
 | Course | Name |
 |----------|----------|
