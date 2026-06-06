@@ -1,0 +1,19 @@
+[[s0, [s1, s4]],
+ [s1, [s2, s5]],
+ [s2, [s3, s5]],
+ [s3, [s0]],
+ [s4, [s0]],
+ [s5, [s0]]]. 
+
+ [[s0,[pot_present]],
+ [s1, [heating_water, pot_present]],
+ [s2, [brewing_coffee, pot_present]],
+ [s3, [ready, pot_present]],
+ [s4, []],
+ [s5, [heating_water]]].
+
+ s0. 
+
+ag(or(neg(pot_present), ef(ready))).
+
+
