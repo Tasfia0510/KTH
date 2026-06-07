@@ -1,0 +1,81 @@
+2. Constraints
+
+Attribute check constraint: 
+Depens on only one attribute (we have that postId should never be negative)
+
+Tuple check constraint: 
+Restricts for one whole row (can be multiple columns in a row)
+
+
+Types of checks
+1. PostID should be a non-negative integer
+    svar: attribute check 
+
+2. StartDate should always be on the same day or earlier than EndDate 
+    svar:  tuple check (must look/compare two attributes with each other) 
+
+3. All tags should be “crypto”, “studying”, “question” or “social"
+    svar: attribute check (checks for a single attribute postTag) 
+
+Triggers 
+1. What is a trigger?
+    svar: trigger is a powerful tool that allows automatic invocation of a function whenever a specified event
+    occurs on a table
+
+→ SQL code that runs automatically when an event occurs. So for example if we have a database where
+user logs in, every time a user is newly added, automatically add a new row to a log (that we have stored). 
+
+
+2. Name 3 events that can cause a trigger to activate
+    svar:  INSERT, DELETE, and UPDATE.
+
+3. What can be done with triggers?
+    svar: By understanding and implementing SQL triggers, you can ensure data integrity, automate repetitive tasks,
+    and enhance overall database performance
+
+→ En typ av begränsning (constraint)
+    
+→ Prevent invalid updates (maybe we dont want user to like its own post, so when a user likes a post, 
+  check if they are the author), more customizable than normal check constraints
+
+4. Quering the database
+
+SELECT * FROM staff;
+
+SELECT * FROM student;
+
+SELECT userID, 'student'  AS role FROM student
+UNION ALL
+SELECT userID, 'staff'    AS role FROM staff
+ORDER BY userID, role;
+
+3. Display all friend relationships
+SELECT * FROM friendship;
+
+4. Display all posts
+SELECT * FROM post;
+
+5. Display all created events
+SELECT * FROM events;
+
+6. Display all Subscriptions
+SELECT * FROM subscriptions;
+
+
+Post: 
+SELECT postID, 'post'  AS role FROM post
+UNION ALL
+SELECT postID, 'postTags'    AS role FROM postTags
+UNION ALL
+SELECT postID, 'postAttachment'    AS role FROM attachment
+UNION ALL
+SELECT postID, 'postLike'    AS role FROM postLike
+ORDER BY postID, role;
+
+Event:
+SELECT eventID, 'event'  AS role FROM events
+UNION ALL
+SELECT eventID, 'attendees'   AS role FROM attendee
+ORDER BY eventID, role;
+
+
