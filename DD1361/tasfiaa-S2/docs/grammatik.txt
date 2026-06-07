@@ -1,0 +1,40 @@
+BNF-grammatik med startsymbol <F>: 
+
+<F> ::= <F1>  <F>  |  EPSILON
+
+<F1> ::= <F2> DECIMAL PERIOD | <F3> PERIOD | <F4> PERIOD | <REP> 
+
+<F2> ::= FORW | BACK | LEFT | RIGHT
+
+<F3> ::= UP | DOWN 
+
+<F4> ::= COLOR HEX
+
+<REP> ::= REP DECIMAL <REPS>
+
+<REPS> ::= <F1> | QUOTE <F1> <F> QUOTE 
+
+
+Slutsymboler/tokens 
+Kommandon
+FORW
+BACK
+LEFT
+RIGHT
+UP
+DOWN
+COLOR
+REP
+
+Skiljetecken
+PERIOD
+QUOTE
+
+Värden
+DECIMAL
+HEX
+EPSILON
+
+
+
+

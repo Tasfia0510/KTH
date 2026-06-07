@@ -1,0 +1,13 @@
+Kör detta i din terminal på datorn 
+
+1. Gå till uppgiften i terminalen:
+cd tasfiaa-W1
+
+2. Gå in i src: 
+cd src
+
+3. Starta servern:
+php -S localhost:8000
+
+4. Copy paste detta i Chrome:
+http://localhost:8000
